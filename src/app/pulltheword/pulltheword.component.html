@@ -1,0 +1,65 @@
+<!-- <p>
+  pulltheword works!
+</p> -->
+
+<nav>
+
+  <a routerLink="/addword" routerLinkActive="active">Add Word</a>
+
+</nav>
+
+
+
+<p>
+<!-- <input type="text" #plword (keyup)="onNameKeyUp($event)"> -->
+
+  <button (click)="getWord()">Pull The Word</button>
+
+</p>
+
+<br>
+
+ <div *ngIf="found">
+
+  <span> {{ pl }}</span>
+
+ </div>
+
+
+
+
+ <p>
+    <!-- <input type="text" #plword (keyup)="onNameKeyUp($event)"> -->
+    
+      <button (click)="getWord()">Support</button>
+    
+    </p>
+    
+    <!-- <br>
+    
+     <div *ngIf="found">
+    
+      <span> {{ pl }}</span>
+    
+     </div> -->
+
+
+
+
+
+
+
+<p>
+<input type="text" (keyup)="onTypedEngWordKeyUp($event)">
+<button (click)="typedEngWord()">Submit</button>
+
+<p>
+{{ answer }}
+</p>
+<!-- </p>
+  <nav>
+
+    <a routerLink="/addword" routerLinkActive="active">Add Word</a>
+
+</nav> -->
+
