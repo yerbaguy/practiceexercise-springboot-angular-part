@@ -34,6 +34,8 @@ export class PullthewordComponent implements OnInit {
   e:number;
   found:boolean;
   answer:string = '';
+  engwordSupport:string = '';
+  engwsupport:string = '';
 
 
 
@@ -138,6 +140,42 @@ export class PullthewordComponent implements OnInit {
       )
    
      }
+
+
+     getSupport() {
+
+      // console.log(this.name);
+   
+      this.httpClient.get('http://localhost:8080/api/getrandengwordnumber')
+      .subscribe(
+         
+       (data:any[]) => {
+   
+        // console.log(data);
+   
+        if (data.length) {
+   
+        this.engwordSupport = data[0].engwordSupport;
+   
+        this.engwsupport = this.engwordSupport;
+   
+        console.log('engwordsupport' + this.engwordSupport);
+   
+        this.found = true;
+   
+        }
+   
+       }
+   
+      )
+   
+     }
+
+
+
+
+
+
 
 
      getEngWordNumber() {
